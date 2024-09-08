@@ -1,0 +1,273 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #0e0e0e;
+}
+
+/* General styling for larger screens (desktop) */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px;
+    color: #0c0101;
+    height: 60px; /* Explicit height for the nav */
+    flex-wrap: wrap; /* Allow elements to wrap if needed */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Align logo and pipe vertically */
+}
+
+.logo h2 {
+    margin-left: 60px;
+    font-family: "Sankofa Display", sans-serif;
+    font-weight: bolder;
+    color: #2a1ddc;
+    font-size: xx-large;
+}
+
+.pipe1 {
+    border-left: 2px solid #0c0101;
+    height: 60px; /* Explicit height to match nav */
+    margin-left: 20px; /* Space between logo and pipe */
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    flex-wrap: wrap; /* Allow nav items to wrap */
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #b90202;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    color: #666;
+}
+
+.pipe {
+    border-left: 2px solid #0c0101;
+    height: 60px; /* Height of the second pipe */
+    margin: 0 15px;
+}
+
+/* Mobile responsiveness (max-width 768px and below) */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px;
+        height: auto; /* Auto height to accommodate wrapping */
+        align-items: flex-start;
+    }
+
+    .logo h2 {
+        margin-left: 0;
+        font-size: large; /* Reduce font size */
+    }
+
+    .pipe1 {
+        display: none; /* Hide pipe for better spacing on smaller screens */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Increase space between items */
+    }
+
+    .pipe {
+        display: none; /* Hide the pipe on mobile to avoid clutter */
+    }
+}
+
+/* Tablet responsiveness (768px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .logo h2 {
+        font-size: x-large; /* Slightly reduce font size for tablets */
+    }
+
+    .nav-links li {
+        margin: 0 10px; /* Adjust spacing for tablet size */
+    }
+}
+
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     padding: 20px;
+     margin-left: 9%;
+}
+
+.content {
+    flex: 3;
+    padding: 20px;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows the layout to wrap on smaller screens */
+    width: 100%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+.content {
+    flex: 2; /* Takes up more space */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allows the image and text to stack on smaller screens */
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('img/winter-recipe.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    height: 100vh; /
+}
+
+.image-container {
+    flex: 1;
+    margin-right: 20px;
+    
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 10px;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.text-container {
+    flex: 2;
+}
+
+.text-container h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.text-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+#sidebar {
+    flex: 1;
+    padding: 20px;
+    border-left: 2px solid #ddd;
+    margin-left: -20px; /* Move sidebar more to the left */
+    min-width: 250px;
+}
+
+.widget {
+    margin-bottom: 20px;
+}
+
+.widget h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.widget p, .widget ul {
+    font-size: 1rem;
+    color: #666;
+}
+
+.widget ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.widget ul li {
+    margin-bottom: 5px;
+}
+
+.widget ul li a {
+    text-decoration: none;
+    color: #b90202;
+}
+
+.widget ul li a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .image-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #sidebar {
+        margin-left: 0; /* Reset margin-left on smaller screens */
+        border-left: none; /* Remove left border for better mobile view */
+    }
+}
+.footer {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+   
+}
